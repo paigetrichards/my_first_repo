@@ -1,0 +1,23 @@
+---
+title: "Practice Plotting and github"
+author: "Paige Richards"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+
+```{r}
+head(msleep)
+ggplot(msleep, aes(x=sleep_total))+
+  geom_histogram(color='blue', fill='skyblue', binwidth= 0.5)+
+  labs(y= 'Count',
+       x= 'Sleep Total') -> p
+ggsave('practice_plot.png', p)
+p
+```
+
