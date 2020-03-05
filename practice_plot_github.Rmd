@@ -16,7 +16,9 @@ head(msleep)
 ggplot(msleep, aes(x=sleep_total))+
   geom_histogram(color='blue', fill='skyblue', binwidth= 0.5)+
   labs(y= 'Count',
-       x= 'Sleep Total') -> p
+       x= 'Sleep Total') +
+  ggtitle("mSleep Histogram")+
+  theme_classic()-> p
 ggsave('practice_plot.png', p)
 p
 ```
